@@ -83,23 +83,34 @@
 ## 3. Chi tiết đồ án (cuối kỳ)
 
 ### 3.1 Tiền xử lý dữ liệu
+
 #### 3.1.1 Loại bỏ
+
 Class `ColAdderDropper` để loại bỏ các cột: `url`, `name`, `model`, `weightTotal`, `fuelType`, `vehicleTransmission`, `modelDate`.
 
 #### 3.1.2 Xử lý các cột dữ liệu số
-- Chuẩn hóa về dạng số
-- Dùng `SimpleImputer` để điền các giá trị thiếu bởi giá trị trung bình
+
+* Chuẩn hóa về dạng số
+* Dùng `SimpleImputer` để điền các giá trị thiếu bởi giá trị trung bình
+
 #### 3.1.3 Xử lý các cột dữ liệu categorize
-- Dùng `MultilabelEncoding` để encode cho các cột mà một mẫu có nhiều hơn một giá trị để giảm chiều so với khi dùng one hot: `vEfuelType`, `driveWheelConfiguration`.
-- Dùng `OneHotEnocding` cho các cột còn lại: `brand`, `eLabel`, `bodyType`, `vEengineType`.
-- Dùng `SimpleImputer` để điền các giá trị thiếu bởi giá trị phổ biến nhất.
-#### 3.1.4 Cuối cùng, dùng `StandardScaler()` để chuẩn hóa dữ liệu.
+
+* Dùng `MultilabelEncoding` để encode cho các cột mà một mẫu có nhiều hơn một giá trị để giảm chiều so với khi dùng one hot: `vEfuelType`, `driveWheelConfiguration`.
+* Dùng `OneHotEnocding` cho các cột còn lại: `brand`, `eLabel`, `bodyType`, `vEengineType`.
+* Dùng `SimpleImputer` để điền các giá trị thiếu bởi giá trị phổ biến nhất.
+
+#### 3.1.4 Cuối cùng, dùng `StandardScaler()` để chuẩn hóa dữ liệu
 
 ### 3.2 Mô hình hóa
-- MLPRegressor
-- RandomForestRegressor
+
+* MLPRegressor
+
+* RandomForestRegressor
+
 ### 3.3 Train model
+
 Fine-tune để chọn ra tham số tốt nhất cho các mô hình.
+
 ### 3.4 Output
 
 ...
